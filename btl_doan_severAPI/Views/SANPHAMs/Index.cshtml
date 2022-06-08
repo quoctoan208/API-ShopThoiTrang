@@ -1,0 +1,63 @@
+﻿@model IEnumerable<btl_doan_severAPI.Models.SANPHAM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tenSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.donGia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.soLuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.anh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motaSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.THELOAI.tenTL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tenSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.donGia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.soLuong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.anh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.motaSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.THELOAI.tenTL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.maSP }) |
+            @Html.ActionLink("Details", "Details", new { id=item.maSP }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.maSP })
+        </td>
+    </tr>
+}
+
+</table>

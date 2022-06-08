@@ -1,0 +1,66 @@
+﻿@model btl_doan_severAPI.Models.SANPHAM
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SANPHAM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.donGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.donGia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.soLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.soLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.anh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.anh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motaSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motaSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.THELOAI.tenTL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.THELOAI.tenTL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maSP }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
